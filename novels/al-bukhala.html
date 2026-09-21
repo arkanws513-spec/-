@@ -1,1 +1,26 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>البخلاء — عالم الروايات</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="logo" href="../index.html">عالم <span>الروايات</span></a><a class="ghost" href="../index.html#novels">← العودة للمكتبة</a></div></header><main><section class="container section"><div class="hero-card" style="max-width:800px;margin:auto;text-align:center"><div class="book-mark">📜</div><p class="eyebrow">قراءة مجانية</p><h1>البخلاء</h1><h3>الجاحظ</h3><p class="hero-text" style="margin:20px auto">صفحة القراءة الأولى لعمل تراثي. سنربط النص الكامل من مصدر قانوني في المرحلة التالية.</p><button class="primary" onclick="alert('سيتم فتح النص الكامل هنا في المرحلة التالية.')">ابدأ القراءة</button></div></section></main><footer><div class="container">© 2026 عالم الروايات</div></footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>البخلاء — عالم الروايات</title><link rel="stylesheet" href="../style.css">
+<style>.reader{max-width:850px;margin:auto}.reader-top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:30px}.chapter-nav{display:flex;gap:10px;flex-wrap:wrap}.chapter-nav button{background:#1b1721;color:#ddd;border:1px solid #3a3042;border-radius:9px;padding:9px 14px;cursor:pointer}.chapter-nav button.active{border-color:#c99a5b;color:#c99a5b}.chapter{background:#15121a;border:1px solid #2c2632;border-radius:18px;padding:30px}.chapter h2{text-align:center;font-size:28px}.chapter p{font-size:18px;line-height:2.2;color:#ddd}.note{color:#aaa0b3;text-align:center;font-size:13px;margin-top:25px}</style>
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="logo" href="../index.html">عالم <span>الروايات</span></a><a class="ghost" href="../index.html#novels">← المكتبة</a></div></header>
+<main><section class="container section reader">
+<div class="reader-top"><div><p class="eyebrow">قراءة مجانية</p><h1>البخلاء</h1><p>الجاحظ</p></div></div>
+<div class="chapter-nav" id="chapters"></div>
+<article class="chapter" id="content"></article>
+<p class="note">تم وضع نص تجريبي قصير هنا. عند إضافة النص الكامل، سنحتفظ بمصدره القانوني وحقوقه بوضوح.</p>
+</section></main>
+<footer><div class="container">© 2026 عالم الروايات</div></footer>
+<script>
+const chapters=[
+ {title:"الفصل الأول — مقدمة",text:"هذه مساحة القراءة في عالم الروايات. يمكن تقسيم العمل إلى فصول، والتنقل بينها من الأزرار أعلاه. النص المعروض هنا تجريبي، وليس نصًا منقولًا من الكتاب."},
+ {title:"الفصل الثاني — بداية القراءة",text:"سيتم وضع المحتوى الكامل للفصل هنا بعد ربطه بمصدر يسمح بإعادة نشر النص أو عرضه بالطريقة المناسبة. صُمم القارئ ليكون مريحًا على شاشة الهاتف."},
+ {title:"الفصل الثالث — متابعة",text:"يمكن لاحقًا إضافة فصول كثيرة، مع حفظ الفصل الذي توقف عنده القارئ، وأزرار واضحة للانتقال إلى الفصل التالي والسابق."}
+];
+const nav=document.getElementById("chapters"),content=document.getElementById("content");
+function show(i){nav.innerHTML=chapters.map((c,n)=>'<button class="'+(n===i?'active':'')+'" onclick="show('+n+')">'+c.title.split(" — ")[0]+'</button>').join("");content.innerHTML='<h2>'+chapters[i].title+'</h2><p>'+chapters[i].text+'</p>'+(i<chapters.length-1?'<div style="text-align:center"><button class="primary" onclick="show('+(i+1)+')">الفصل التالي →</button></div>':'');}
+show(0);
+</script>
+</body></html>
