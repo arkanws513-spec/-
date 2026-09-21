@@ -1,6 +1,7 @@
 const novels=[
  {title:"البخلاء",author:"الجاحظ",genre:"أدب عربي • تراث",icon:"📜",source:"عمل تراثي",link:"novels/al-bukhala.html"},
  {title:"رسالة الغفران",author:"أبو العلاء المعري",genre:"أدب عربي • كلاسيكي",icon:"✒",source:"عمل تراثي",link:"novels/risalat-al-ghufran.html"},
+ {title:"صعود قديس العوالم السبع",author:"عالم الروايات",genre:"فانتازيا • مغامرة",icon:"✦",source:"أصلية",link:"novels/saint-of-seven-worlds.html"},
  {title:"رحلة إلى المجهول",author:"عالم الروايات",genre:"مغامرة • خيال",icon:"✦",source:"تجريبية"},
  {title:"مدينة تحت القمر",author:"عالم الروايات",genre:"غموض • خيال",icon:"☾",source:"تجريبية"},
  {title:"آخر حارس",author:"عالم الروايات",genre:"مغامرة • فانتازيا",icon:"⚔",source:"تجريبية"},
