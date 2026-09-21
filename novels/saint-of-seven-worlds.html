@@ -9,7 +9,7 @@
 <header class="site-header"><div class="container nav"><a class="logo" href="../index.html">عالم <span>الروايات</span></a><a class="ghost" href="../index.html#novels">← المكتبة</a></div></header>
 <main><section class="container section reader">
 <div class="reader-head"><div class="book-mark">✦</div><p class="eyebrow">رواية أصلية</p><h1>صعود قديس العوالم السبع</h1><p class="meta">تأليف: عالم الروايات • فانتازيا ومغامرة</p></div>
-<div class="chapter-nav" id="chapters"></div><article class="chapter" id="content"></article><div class="reader-actions" id="actions"></div>
+<div class="reader-actions" id="topActions"></div><div class="chapter-nav" id="chapters"></div><article class="chapter" id="content"></article><div class="reader-actions" id="bottomActions"></div>
 </section></main>
 <footer><div class="container">© 2026 عالم الروايات</div></footer>
 <script>
@@ -33,7 +33,6 @@ const chapters=[
 ]],
 ["الفصل الثاني — الباب الذي لا يُرى",["عاد يامن إلى نيراف قبل الفجر بقليل، لكنه لم يدخل الورشة. وضع الحجر فوق الطاولة وراقبه حتى أشرقت الشمس. كلما اقترب منه شعر بدفء خفيف في كفه، وكأن الحجر يعرف أنه عاد.","وعندما أغمض عينيه ظهرت البوابات السبع من جديد. لكن هذه المرة كانت إحدى البوابات أقرب من البقية، وعلى سطحها ظهر نقش يشبه الشعار الذي وجده في الحفرة.","عندها ظهرت على جدار الورشة دائرة من الضوء، ثم تشكل داخلها إطار باب كامل. لم يكن هناك مقبض ولا مفصلات. فقط باب ينتظر أن يُفتح."]]
 ];
-const nav=document.getElementById("chapters"),content=document.getElementById("content"),actions=document.getElementById("actions");
-function show(i){nav.innerHTML=chapters.map((c,n)=>'<button class="'+(n===i?'active':'')+'" onclick="show('+n+')">'+(n+1)+'</button>').join("");content.innerHTML='<div class="chapter-label">الفصل '+(i+1)+' من '+chapters.length+'</div><h2>'+chapters[i][0]+'</h2>'+chapters[i][1].map(p=>'<p>'+p+'</p>').join("");actions.innerHTML=(i>0?'<button class="ghost" onclick="show('+(i-1)+')">← السابق</button> ':'')+(i<chapters.length-1?'<button class="primary" onclick="show('+(i+1)+')">التالي →</button>':'');window.scrollTo({top:0,behavior:"smooth"});}
+undefined
 show(0);
 </script></body></html>
