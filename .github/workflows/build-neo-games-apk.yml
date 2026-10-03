@@ -124,10 +124,11 @@ jobs:
           /tmp/gradle/gradle-8.7/bin/gradle :app:assembleDebug --no-daemon
           cp app/build/outputs/apk/debug/app-debug.apk neo-games.apk
 
-      - name: Publish APK
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add neo-games.apk
-          git commit -m "Publish Neo Games APK" || exit 0
-          git push
+      - name: Publish public GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: neo-v1.0.0
+          name: Neo Games APK v1.0.0
+          body: Android APK for Neo-games-.
+          files: neo-games.apk
+          overwrite_files: true
